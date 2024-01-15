@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       socketPort: 3001,
-      url: "https://nuxt-socket-io.onrender.com/",
-      // url: "http://localhost",
+      // url: "https://nuxt-socket-io.onrender.com/",
+      url: "http://localhost",
     },
   },
   plugins: ["./plugins/socket.io"],
