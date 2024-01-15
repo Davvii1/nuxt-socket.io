@@ -7,7 +7,8 @@ export default defineNitroPlugin((nitroApp) => {
   const socketServer = new Server(3001, {
     serveClient: false,
     cors: {
-      origin: "*",
+      origin: true,
+      credentials: true,
     },
   })
 

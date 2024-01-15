@@ -11,6 +11,5 @@ export default defineNuxtConfig({
   plugins: ["./plugins/socket.io"],
   nitro: {
     plugins: ["./plugins/socket.io.server"],
-    preset: "render_com",
   },
 })
