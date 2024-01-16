@@ -1,6 +1,6 @@
 import { Server } from "socket.io"
 import { SocketEvent } from "@/utils/SocketEvent"
-import { createServer } from "http"
+import { createServer } from "http2"
 
 let count = 0
 
