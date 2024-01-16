@@ -4,7 +4,7 @@ import { SocketEvent } from "@/utils/SocketEvent"
 let count = 0
 
 export default defineNitroPlugin((nitroApp) => {
-  const socketServer = new Server(3001, {
+  const socketServer = new Server({
     serveClient: false,
     cors: {
       origin: true,
