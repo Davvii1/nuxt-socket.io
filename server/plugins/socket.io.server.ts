@@ -1,6 +1,6 @@
 import { Server } from "socket.io"
 import { SocketEvent } from "@/utils/SocketEvent"
-import { createServer } from "http2"
+import { createServer } from "http"
 
 let count = 0
 
@@ -9,7 +9,8 @@ export default defineNitroPlugin((nitroApp) => {
   const socketServer = new Server(server, {
     serveClient: false,
     cors: {
-      origin: useRuntimeConfig().public.url,
+      origin: "https://genuine-meringue-50171a.netlify.app/",
+      methods: ["GET", "POST", "PUT", "DELETE"],
       credentials: true,
     },
   })
