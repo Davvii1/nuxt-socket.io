@@ -28,6 +28,4 @@ export default defineNitroPlugin((nitroApp) => {
       socketServer.emit(SocketEvent.new_count, count)
     })
   })
-
-  server.listen(3001)
 })
