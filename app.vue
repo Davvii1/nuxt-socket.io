@@ -18,6 +18,10 @@ const state = reactive({
   counter: 0,
 })
 
+$io.on("connect", () => {
+  console.log("connected")
+})
+
 $io.on(SocketEvent.new_count, (message) => {
   state.counter = message
 })
@@ -37,8 +41,6 @@ const down = () => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 40rem;
-  padding-right: 40rem;
 }
 
 p {
