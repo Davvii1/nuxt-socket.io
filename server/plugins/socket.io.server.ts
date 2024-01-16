@@ -6,7 +6,7 @@ let count = 0
 
 export default defineNitroPlugin((nitroApp) => {
   const server = createServer()
-  const socketServer = new Server(3001, {
+  const socketServer = new Server(server, {
     serveClient: false,
     cors: {
       origin: "https://genuine-meringue-50171a.netlify.app",
@@ -28,4 +28,6 @@ export default defineNitroPlugin((nitroApp) => {
       socketServer.emit(SocketEvent.new_count, count)
     })
   })
+
+  server.listen(3001)
 })
