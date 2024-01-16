@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       socketPort: 3001,
-      url: "https://nuxt-socket-io.onrender.com/",
+      url: "https://nuxt-socket-io.vercel.app/",
       // url: "http://localhost",
     },
   },
