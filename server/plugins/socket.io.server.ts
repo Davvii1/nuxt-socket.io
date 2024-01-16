@@ -10,6 +10,7 @@ export default defineNitroPlugin((nitroApp) => {
     serveClient: false,
     cors: {
       origin: useRuntimeConfig().public.url,
+      credentials: true,
     },
   })
 

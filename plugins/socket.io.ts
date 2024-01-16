@@ -5,6 +5,7 @@ export default defineNuxtPlugin(() => {
 
   const socket = io(`${config.url}`, {
     autoConnect: true,
+    withCredentials: true,
   })
 
   return { provide: { io: socket } }
