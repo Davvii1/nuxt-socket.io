@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       socketPort: 3001,
-      url: "https://nuxt-socket-io.vercel.app/",
+      url: "https://genuine-meringue-50171a.netlify.app/",
       // url: "http://localhost",
     },
   },
