@@ -1,10 +1,12 @@
 import { Server } from "socket.io"
 import { SocketEvent } from "@/utils/SocketEvent"
+import { createServer } from "http"
 
 let count = 0
 
 export default defineNitroPlugin((nitroApp) => {
-  const socketServer = new Server(3001, {
+  const server = createServer()
+  const socketServer = new Server(server, {
     serveClient: false,
     cors: {
       origin: "*",

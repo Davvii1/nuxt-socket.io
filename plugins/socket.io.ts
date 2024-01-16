@@ -4,7 +4,7 @@ export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig().public
 
   const socket = io(`${config.url}:${config.socketPort}`, {
-    // autoConnect: false,
+    autoConnect: false,
   })
 
   return { provide: { io: socket } }
