@@ -9,7 +9,7 @@ export default defineNitroPlugin((nitroApp) => {
   const socketServer = new Server(server, {
     serveClient: false,
     cors: {
-      origin: "https://genuine-meringue-50171a.netlify.app/",
+      origin: "https://genuine-meringue-50171a.netlify.app",
       methods: ["GET", "POST", "PUT", "DELETE"],
       credentials: true,
     },
