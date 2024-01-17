@@ -1,12 +1,11 @@
-import io from "socket.io-client"
+import { io } from "socket.io-client"
 
+//Socket Client
+const socket = io()
 export default defineNuxtPlugin(() => {
-  const config = useRuntimeConfig().public
-
-  const socket = io(`https://genuine-meringue-50171a.netlify.app`, {
-    autoConnect: true,
-    withCredentials: true,
-  })
-
-  return { provide: { io: socket } }
+  return {
+    provide: {
+      io: socket,
+    },
+  }
 })

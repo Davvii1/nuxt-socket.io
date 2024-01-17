@@ -27,11 +27,11 @@ $io.on(SocketEvent.new_count, (message) => {
 })
 
 const up = () => {
-  $io.emit(SocketEvent.up, { value: 5 })
+  $io.emit("joinRoom", { value: 5 })
 }
 
 const down = () => {
-  $io.emit(SocketEvent.down, { value: 5 })
+  $io.emit("leaveRoom", { value: 5 })
 }
 </script>
 
