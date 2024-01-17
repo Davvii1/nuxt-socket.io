@@ -3,13 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "node .output/server/index.mjs",
     "build": "nuxt build",
-    "dev": "nuxt dev --host=0.0.0.0",
+    "dev": "rm -rf /tmp/nitro && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "dev:migrate": "tsx ./migrate",
-    "start": "HOST=0.0.0.0 node .output/server/index.mjs"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@types/node": "^20.11.2",
