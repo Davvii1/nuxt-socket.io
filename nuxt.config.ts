@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       process.env.NODE_ENV == "production" ? undefined : "../preset/entry.dev",
     preset: "./preset",
     output: {
-      publicDir: path.join(__dirname, "dist"),
+      publicDir: path.join(__dirname, "/dist"),
     },
     // plugins: ["./plugins/socket.io.server"],
   },

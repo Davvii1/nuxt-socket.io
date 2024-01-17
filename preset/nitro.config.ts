@@ -5,6 +5,7 @@ export default <NitroPreset>{
   extends: "node", // You can extend existing presets
   entry: fileURLToPath(new URL("./entry.ts", import.meta.url)),
   serveStatic: true,
+  preset: "netlify",
   hooks: {
     compiled() {
       // ...
