@@ -5,20 +5,18 @@ let count = 0
 export const socketHandler = async (io: Server) => {
   console.log("✔️ Hello from the socket handler")
 
-  io.on("connection", function (socket) {
+  io.on("connection", (socket) => {
     console.log("socket connected", socket.id)
-    socket.on("disconnect", function () {
-      console.log("socket disconnected", socket.id)
-    })
+    io.emit("new_count", count)
 
-    socket.on("joinRoom", (room, user) => {
+    socket.on("up", (room, user) => {
       count += 1
-      socket.emit("new_count", count)
+      io.emit("new_count", count)
     })
 
-    socket.on("leaveRoom", (room, user) => {
+    socket.on("down", (room, user) => {
       count -= 1
-      socket.emit("new_count", count)
+      io.emit("new_count", count)
     })
 
     socket.on("message", function (room, message) {

@@ -22,16 +22,16 @@ $io.on("connect", () => {
   console.log("connected")
 })
 
-$io.on(SocketEvent.new_count, (message) => {
+$io.on("new_count", (message) => {
   state.counter = message
 })
 
 const up = () => {
-  $io.emit("joinRoom", { value: 5 })
+  $io.emit("up")
 }
 
 const down = () => {
-  $io.emit("leaveRoom", { value: 5 })
+  $io.emit("down")
 }
 </script>
 
